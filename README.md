@@ -3,7 +3,6 @@
 ## Objective:
 Find the square root without any tranditional python libraries
 
-
 # Highlights and Embeddings
 This directory is for generating Embeddings and Highlights on news corpus.
 
@@ -18,22 +17,23 @@ For Highlights,
 ```
 # SPARK #
 # ===== #
-#    Adding Highlights notebook to SC for using the necesary functions
+# Adding Highlights notebook to SC for using the necesary functions
 sc.addPyFile("s3://ml-pyspark-notebooks/e-BVAKKN17TARF22AZOKQ3NG62F/DraupMLmodels/news_processing/highlights_and_embeddings/news_highlights/generate_highlights.py")
 
-#    Importing the highlights function
+# Importing the highlights function
 from generate_highlights import get_highlights
-
+```
+```
 # PYTHON #
 # ====== #
 import sys
 sys.path.append("/home/notebook/work/DraupMLmodels/news_processing/highlights_and_embeddings/news_highlights/")
 
-#    Importing the highlights function
+# Importing the highlights function
 from generate_highlights import get_highlights
-
-# PS: No preprocessing or postprocessing is needed for using the shown function
 ```
+PS: No preprocessing or postprocessing is needed for using the shown function
+
 *the input spark dataframe should contain the following,*
 |News Title|News Description|...|
 |----------|----------------|---|
@@ -50,22 +50,22 @@ For Embeddings,
 ```
 # SPARK #
 # ===== #
-#    Adding USE embeddings generator notebook to SC for using the necesary functions
+# Adding USE embeddings generator notebook to SC for using the necesary functions
 sc.addPyFile("s3://ml-pyspark-notebooks/e-BVAKKN17TARF22AZOKQ3NG62F/DraupMLmodels/news_processing/highlights_and_embeddings/news_embeddings/generate_use_embeddings.py")
 
-#    Importing the highlights function
+# Importing the embeddings function
 from generate_use_embeddings import get_use_embed_from_str
-
+```
+```
 # PYTHON #
 # ====== #
 import sys
 sys.path.append("/home/notebook/work/DraupMLmodels/news_processing/highlights_and_embeddings/news_embeddings/")
 
-#    Importing the highlights function
+# Importing the embeddings function
 from generate_use_embeddings import get_use_embed_from_str
-
-# PS: No preprocessing or postprocessing is needed for using the shown function
 ```
+PS: No preprocessing or postprocessing is needed for using the shown function
 *the input spark dataframe should contain the following,*
 |News Title|Highlights|...|
 |----------|----------|---|
