@@ -12,9 +12,25 @@ For general purpose, spark_news_process.py will have the necessary functions to 
 
 For DAG process, ETL team can use spark_news_process_for_dag.ipynb. This has the same utils found in spark_news_process.py but with an option of getting input and output parquet path from the set environment variable.
 
-For Highlights, the input spark dataframe should contain the following,
+For Highlights, 
+*the input spark dataframe should contain the following,*
 |News Title|News Description|...|
 |----------|----------------|---|
+|str      |str            |any columns|          
+*the output spark dataframe will additional columns like the following,*
+|News Title|News Description|Highlights|...|
+|----------|----------------|----------|---|
+|str      |str            |list(str) |any present columns|
+
+For Embeddings, 
+*the input spark dataframe should contain the following,*
+|News Title|Highlights|...|
+|----------|----------|---|
+|str      |list(str) |any columns|
+*the output spark dataframe will additional columns like the following,*
+|News Title|Highlights|Title Embedding|Highlights Embedding|...|
+|----------|----------|---------------|--------------------|---|
+|str      |list(str) |list(float)   |list(float)        |any present columns|
 
 
 ## Function overview
