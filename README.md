@@ -14,6 +14,7 @@ For DAG process, ETL team can use spark_news_process_for_dag.ipynb. This has the
 
 For Highlights, the input spark dataframe should contain the following,
 |News Title|News Description|...|
+|----------|----------------|---|
 
 
 ## Function overview
