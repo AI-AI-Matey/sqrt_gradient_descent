@@ -13,7 +13,7 @@ For general purpose, spark_news_process.py will have the necessary functions to 
 For DAG process, ETL team can use spark_news_process_for_dag.ipynb. This has the same utils found in spark_news_process.py but with an option of getting input and output parquet path from the set environment variable.
 
 
-For Highlights, 
+For Highlights,
 *the input spark dataframe should contain the following,*
 |News Title|News Description|...|
 |----------|----------------|---|
